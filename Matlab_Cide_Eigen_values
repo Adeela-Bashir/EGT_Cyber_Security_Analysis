@@ -5,14 +5,14 @@ Compute the Jacobian matrix with respect to [beta, alpha].
 syms alpha beta a b c d v w m p n s
 
 % Define the replicator dynamic equations
-F_beta = beta * (1 - beta) * (b - d - b*alpha + v*b*alpha + v*w*alpha);
-F_alpha = alpha * (1 - alpha) * (-c + a - m*p - a*v*beta - v*n*s*beta + v*m*p*beta);
+F_beta = (beta - beta.^2) * (b - d - b*alpha + v*b*alpha + v*w*alpha);
+F_alpha = (alpha - alpha.^2) * (-c + a - m*p - a*v*beta - v*n*s*beta + v*m*p*beta);
 
 % Define the system of equations
-system = [F_alpha; F_beta];
+system = [F_beta; F_alpha];
 
 % Calculate the Jacobian matrix of the system
-Jacobian = jacobian(system, [alpha, beta])
+Jacobian = jacobian(system, [beta, alpha])
 
 % Solve for equilibrium points (alpha, beta)
 equilibriumPoints = solve([F_alpha == 0, F_beta == 0], [alpha, beta]);

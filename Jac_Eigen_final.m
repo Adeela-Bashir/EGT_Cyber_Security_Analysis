@@ -60,5 +60,5 @@
 
 (* ::Input:: *)
 (*J5=J;*)
-(*\[Beta]=(a-c-m p)/((a-m p+n s) v);\[Alpha]=(-b+d)/(-b+b v+v w);*)
+(*\[Beta]=(c-c-m p)/((m p-a-n s) v);\[Alpha]=(-b+d)/(-b+b v+v w);*)
 (*Eigenvalues[J]*)

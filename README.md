@@ -1,2 +1,2 @@
-# Attack_Defence
-Python implementation of an evolutionary game-theoretic cyber defense model. It simulates attacker-defender dynamics, identifying Evolutionarily Stable Strategies (ESS). Includes replicator dynamics equations, stability analysis using Jacobian matrices, and equilibrium point visualizations.
+# EGT_Cyber_Security_Analysis
+Python implementation of an evolutionary game-theoretic cyber defence model. It contains code to simulate 100,000 randomly generated games (Random_games), simulation data plots (Simulation_Results_Plots), empirical data plots (Empirical_Data_Plots) and stable equilibrium point figure (Stability_Figure).

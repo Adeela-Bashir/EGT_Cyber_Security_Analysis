@@ -25,7 +25,7 @@
 (*(*Compute eigenvalues at each equilibrium point and determine stability*)*)
 (*Print["Eigenvalues at equilibrium points:"];*)
 (**)
-(*equilibriumMarkers=Table[eigs=Eigenvalues[J/. {\[Alpha]->eq[[2]],\[Beta]->eq[[1]]}];*)
+(*equilibriumMarkers=Table[eigs=Eigenvalues[J/. {\[Alpha]->eq[[1]],\[Beta]->eq[[2]]}];*)
 (*Print["At (",eq[[2]],",",eq[[1]],") -> Eigenvalues: ",eigs];*)
 (*(*Check stability:If all eigenvalues are negative,it is stable (black filled).Otherwise,it is unstable (white filled).*)*)
 (*If[AllTrue[eigs,#<0&],{Black,Disk[eq,0.02]},{White,Disk[eq,0.02],Black,Circle[eq,0.02]}],{eq,equilibria}];*)
@@ -44,6 +44,7 @@
 (**)
 (*(*Stream plot with equilibrium points*)*)
 (*StreamPlot[{f1,f2},{\[Alpha],0,1},{\[Beta],0,1},PlotRange->{{-0.05,1.05},{-0.05,1.05}},FrameStyle->Directive[Black],FrameLabel->{Style["Frequency of Attack",22,FontFamily->"Arial",Black],Style["Frequency of Defence",22,FontFamily->"Arial",Black]},FrameTicksStyle->Directive[Black,FontFamily->"Arial",22],StreamStyle->{Black},Epilog->equilibriumMarkers]*)
-
+(*file = Export["figure.png", %, ImageResolution -> 300];*)
+(*Print["Saved at: ", file];*)
 
 
